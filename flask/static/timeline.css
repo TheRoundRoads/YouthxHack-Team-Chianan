@@ -132,3 +132,21 @@
       left: 0%;
     }
   }
+
+.green {
+    color: #00CC00;
+}
+.red {
+    color: #CC0000;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+    padding: 5px;
+    background-color: white;
+}
