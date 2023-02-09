@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<title>
+		<head>Farms</head>
+	</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='farms.css')}}">
+	<body>
+    <form action="{{url_for('index')}}">
+      <input id="back" type="submit" value="Back">
+    </form>
+		<h1>Farms</h1>
+		<ul>
+		{% for farm in farms %}
+			<li>
+				<h2>{{ farm.name }}</h2>
+				<p>Location: {{ farm.location }}</p>
+				<p>Produce: {{ farm.produce }}</p>
+				<p>Methods: {{ farm.methods }}</p>
+				<p>Process: {{ farm.process }}</p>
+			</li>
+		{% endfor %}
+		</ul>
+
+		<h2>Add a Farm</h2>
+		<form method="post">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+			<br>
+			<label for="location">Location:</label>
+			<input type="text" id="location" name="location" required>
+			<br>
+			<label for="produce">Produce:</label>
+			<input type="text" id="produce" name="produce" required>
+			<br>
+			<label for="methods">Methods:</label>
+			<textarea id="methods" name="methods" required></textarea>
+			<br>
+			<label for="process">Process:</label>
+			<textarea id="process" name="process" required></textarea>
+			<br>
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>

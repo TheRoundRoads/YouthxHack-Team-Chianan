@@ -5,7 +5,9 @@
         <link rel="stylesheet" href="{{url_for('static', filename='timeline.css')}}">
     </head>
     <body>
-        <a class="button" href="{{url_for('home')}}">Back</a>
+        <form action="{{url_for('home')}}">
+          <input id="back" type="submit" value="Back">
+        </form>
         <div class="timeline">
             <div class="container right">
                 <div class="content">

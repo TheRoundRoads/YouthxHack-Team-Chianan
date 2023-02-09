@@ -7,10 +7,32 @@
         <title>TraceEats</title>
     </head>
     <body>
-        <h1>TraceEats</h1>
+        <form action="{{url_for('index')}}">
+            <input class="butt2" type="submit" value="Back">
+        </form>
+        <h1>Welcome to TraceEats!</h1>
         <h2>Choose your product:</h2>
-        <a href="{{url_for('eggs')}}">Seng Choon eggs</a><br>
-        <a href="{{url_for('mushroom')}}">Mushrooms</a><br>
-        <a href="{{url_for('barramundi')}}">Barramundi</a><br>
+        <table>
+            <tr>
+                <th>Product Name</th>
+                <th>Image</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td><a href="{{url_for('eggs')}}">Seng Choon eggs</a></td>
+                <td class="images"><img src="{{url_for('static', filename='eggs.jpg')}}" alt="eggs"></td>
+                <td>$3.65</td>
+            </tr>
+            <tr>
+                <td><a href="{{url_for('mushroom')}}">Kin Yan Mushrooms</a></td>
+                <td class="images"><img src="{{url_for('static', filename='mushroom.jpg')}}" alt="mushroom"></td>
+                <td>$2.98</td>
+            </tr>
+            <tr>
+                <td><a href="{{url_for('barramundi')}}">Barramundi</a><br></td>
+                <td class="images"><img src="{{url_for('static', filename='fish.jpg')}}" alt="fish"></td>
+                <td>$12.00</td>
+            </tr>
+        </table>      
     </body>
 </html>

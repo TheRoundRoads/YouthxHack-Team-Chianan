@@ -1,3 +1,48 @@
+* {
+    margin: 5px;
+    padding: 5px;
+}
 body {
-    background-color: #FFFFF0;
+    background-color: #FFFFFF;
+}
+
+.images {
+    width: 300px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#butt1 {
+    border: 1px outset blue;
+    background-color: lightBlue;
+    height:200px;
+    width:200px;
+    cursor:pointer;
+}
+
+#butt1:hover {
+   background-color: blue;
+    color:white;
+}
+
+#butt2 {
+    border: 1px outset green;
+    background-color: lightgreen;
+    height:200px;
+    width:200px;
+    cursor:pointer;
+}
+
+#butt2:hover {
+   background-color: green;
+    color:white;
 }
