@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/gohyi/OneDrive/Documents/YouthxHack/food.db" foreign_keys="1"/><window><current_tab id="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="150"/><column_width id="3" width="1192"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="companies"/><default_encoding codec=""/><browsetable_info data="AAAABQAAAAoAcwB0AG8AYwBrAAAAAAAAAAAAAAAAAAAAAAAAAAAA//////////8AAAAA/////wAAABAAcAByAG8AZAB1AGMAdABzAAAAAgAAAAAAAAAAAAAAAAAAAAAA//////////8AAAAA/////wAAAAwAbQBhAHIAawBlAHQAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////wAAAAD/////AAAACgBmAGEAcgBtAHMAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////wAAAAD/////AAAAEgBjAG8AbQBwAGEAbgBpAGUAcwAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////AAAAAP////8="/></tab_browse><tab_sql><sql name="SQL 1">-- Get all product names that company A sells
+SELECT ProductName, Farm FROM products WHERE ProductID IN
+(SELECT ProductID FROM market WHERE CompanyID IN 
+(SELECT CompanyID FROM companies WHERE Name = &quot;Company B&quot;));</sql><sql name="SQL 2">--Get all companies a farm is supplying to
+SELECT Name FROM companies WHERE CompanyID IN 
+(SELECT CompanyID FROM market WHERE ProductID IN 
+(SELECT ProductID FROM products WHERE Farm = &quot;Farm 4&quot;));</sql><current_tab id="1"/></tab_sql></sqlb_project>
