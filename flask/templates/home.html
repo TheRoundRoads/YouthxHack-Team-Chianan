@@ -8,7 +8,7 @@
     </head>
     <body>
         <form action="{{url_for('index')}}">
-            <input class="butt2" type="submit" value="Back">
+            <input id="butt2" type="submit" value="Back">
         </form>
         <h1>Welcome to TraceEats!</h1>
         <h2>Choose your product:</h2>
@@ -33,6 +33,8 @@
                 <td class="images"><img src="{{url_for('static', filename='fish.jpg')}}" alt="fish"></td>
                 <td>$12.00</td>
             </tr>
-        </table>      
+        </table>
+        <h2><a href="{{url_for('recall')}}">Food Recalls</a></h2>
+        <h2>Disruptions</h2>
     </body>
 </html>
