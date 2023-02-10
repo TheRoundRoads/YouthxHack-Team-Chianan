@@ -11,16 +11,28 @@
         <div class="timeline">
             <div class="container left">
               <div class="content">
-                <h2>Malaysia</h2>
-                <p>Grown freshly in farms, watered regularly.</p>
+                <h2>Mushroom Farm</h2>
+                <p>Making mushroom compost, initiated by mixing and wetting ingredients as they are stacked together.</p>
+                  <p>Pasteurisation is necessary to kill any insects, nematodes, pest fungi, or other pests that may be present in the compost.</p>	
+                  <p>As a mushroom matures, it produces millions of microscopic spores on mushroom gills lining the underside of a mushroom cap. These spores function roughly similar to the seeds of a higher plant.
+                  </p>
               </div>
             </div>
             <div class="container right">
               <div class="content">
-                <h2>Singapore</h2>
-                <p>Shipped over by plane</p>
+                <h2>Supermarket</h2>
+                <p>Most mushroom farmers harvest for 35 to 42 days, although some harvest a crop for 60 days, and harvest can go on for as long as 150 days.</p>
               </div>
             </div>
           </div>
+          <div class="white-bg">
+            <h1>Mushroom Alternatives</h1>
+              <ul>
+                {% for alternative in alternatives %} 
+                  <li>{{alternative}}</li>
+                {% endfor %}
+              </ul>
+          </div>
+          
     </body>
 </html>

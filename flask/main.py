@@ -1,8 +1,17 @@
-import flask
+import flask, sqlite3
 from flask import render_template, request, redirect
 
 app = flask.Flask(__name__)
 farm_list = []
+items = [{"name": "EGO Swiss roll", "path": "swissroll.jpg", "reason": "exceeding levels of sorbic acid"},
+         {"name": "Prego Carbonara Mushroom Pasta Sauce", "path": "sauce.png", "reason": "Product spoilage"},
+         {"name": "Mie Sedaap", "path": "noodle.png", "reason": "presence of ethylene oxide"}]
+alternatives_dict = {
+        "eggs": ["Tofu", "Chickpea Flour", "Flax seeds"],
+        "mushrooms": ["Portobello Mushrooms", "Oyster Mushrooms", "Shiitake Mushrooms"],
+        "fish": ["Red Grouper", "Sardine", "Salmon"]
+    }
+
 
 @app.route('/')
 def index():
@@ -30,15 +39,20 @@ def home():
 
 @app.route('/eggs/')
 def eggs():
-    return render_template("eggs.html")
+    return render_template("eggs.html", alternatives=alternatives_dict["eggs"])
 
 @app.route('/mushroom/')
 def mushroom():
-    return render_template("mushroom.html")
+    return render_template("mushroom.html", alternatives=alternatives_dict["mushrooms"])
 
 @app.route('/barramundi/')
 def barramundi():
-    return render_template("barramundi.html")
+    return render_template("barramundi.html", alternatives=alternatives_dict["fish"])
+
+@app.route('/recall/')
+def recall():
+    db = sqlite3.connect("recalls.db")
+    return render_template("recall.html", items=items)
 
 if __name__ == '__main__':
     app.run()
