@@ -9,3 +9,5 @@
  2. Tracing function - Timeline of farm to fork for different products (including eggs, mushrooms, barrumundi)
  3. Food recall function - Shows different products and reasons for them being recalled.
  
+Also contains sqlite files which contains tables and queries.
+Tables include products, market and companies to show which products go to which companies.
