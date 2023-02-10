@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Food Alternatives</title>
+  </head>
+  <body>
+    <h1>Food Alternatives</h1>
+    {% for food, alternatives in alternatives.items() %}
+      <h2>Alternatives to {{ food }}:</h2>
+      <ul>
+        {% for alternative in alternatives %}
+          <li>{{ alternative }}</li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </body>
+</html>
